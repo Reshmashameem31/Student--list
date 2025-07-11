@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+   
+         <h1>STUDENT FORM</h1>
+         
+    
+    <form class="form1" id="studentForm">
+        <table border="2" cellpadding="5" class="mainbox">
+      
+        <tr>
+          <td>Name</td><td><input type="text" id="name"></td>
+            
+        </tr>
+        <tr>
+        <td>Age</td><td><input type="number" id="age"></td>
+        </tr>
+        <tr>
+            <td>Gender</td><td class="gender"><input type="radio" name="gender" value="Male">Male<input type="radio" name="gender" value="Female">Female</td>
+
+        </tr>
+        <tr><td>Course</td><td><select id="course"><Option>Javascript</Option>
+        <Option>Python Programming</Option>
+     <Option>Java</Option>
+    <Option>Cybersecurity</Option></select></td></tr>
+     <tr>
+        <td>E-mail</td><td><input type="email" id="email"></td>
+
+     </tr>
+     <tr>
+        <td colspan="2">
+     <button class="button">Save</button></td></tr>
+
+     
+    
+        </table>
+        
+
+    </form>
+    <form class="form2">
+        <table border="1" class="mainbox2">
+       
+            <tr><td>NAME</td>
+            <td>AGE</td>
+        <td id="long">COURSE</td>
+    <td id="gen">GENDER</td>
+<td id="width">EMAIL</td>
+<td id="act">ACTION</td></tr>
+        
+
+
+
+        </table>
+    </form>
+     
+        </div> 
+        <script>
+  var form = document.getElementById("studentForm");
+  var table = document.querySelector(".mainbox2");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    var name = document.getElementById("name").value;
+    var age = document.getElementById("age").value;
+    var email = document.getElementById("email").value;
+    var course = document.getElementById("course").value;
+    var genderEl = document.querySelector('input[name="gender"]:checked');
+    var gender = genderEl ? genderEl.value : "";
+
+    if (!name || !age || !email || !gender) {
+      alert("Please fill all fields");
+      return;
+    }
+
+    var newRow = document.createElement("tr");
+    
+    
+
+    var td1 = document.createElement("td");
+    td1.textContent = name;
+    td1.style.backgroundColor="lightsalmon";
+
+    var td2 = document.createElement("td");
+    td2.textContent = age;
+    td2.style.backgroundColor="azure";
+
+    var td3 = document.createElement("td");
+    td3.textContent = course;
+td3.style.backgroundColor="lightsalmon";
+    var td4 = document.createElement("td");
+    td4.textContent = gender;
+td4.style.backgroundColor="azure";
+    var td5 = document.createElement("td");
+   td5.style.backgroundColor="lightsalmon";
+    td5.textContent = email;
+    
+
+    var td6 = document.createElement("td");
+    td6.style.backgroundColor="azure"
+    var deleteBtn = document.createElement("button");
+    deleteBtn.textContent = "Delete";
+    deleteBtn.style.backgroundColor = "red";
+    deleteBtn.style.color = "white";
+    deleteBtn.style.padding="2px";
+    deleteBtn.style.margin="2px";
+
+    deleteBtn.addEventListener("click", function () {
+      newRow.remove();
+    });
+
+    td6.appendChild(deleteBtn);
+
+    newRow.appendChild(td1);
+    newRow.appendChild(td2);
+    newRow.appendChild(td3);
+    newRow.appendChild(td4);
+    newRow.appendChild(td5);
+    newRow.appendChild(td6);
+
+    table.appendChild(newRow);
+    form.reset();
+  });
+</script>
+
+</body>
+</html>

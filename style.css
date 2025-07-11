@@ -1,0 +1,199 @@
+body{
+    
+    
+    
+   overflow-x: hidden;
+    
+    
+    
+    
+    
+}
+.container{
+    background-color: antiquewhite;
+  position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    
+    
+    
+
+    
+    
+    z-index: 1;
+    
+}
+
+body h1{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.form1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+    
+    
+    
+    
+}
+
+
+
+
+.mainbox{
+padding: 10px;
+width: 30%;
+height: 400px;
+position: relative;
+    z-index: 2;
+    background-color: azure;
+    
+    
+    
+
+   
+}
+.mainbox td:first-child{
+    font-weight: bold;
+}
+
+
+ input{    width: 80%;
+    padding: 5px;
+
+}
+select{
+    width: 85%;
+ padding: 5px;}
+.gender{
+    display: flex;
+    margin-top: 20px;
+}
+
+.button{
+       width: 100%;
+       height: 40px;
+       font-weight: bold;
+    background-color: aquamarine;
+    color: black;
+    font-size: 19px;
+}
+.form2{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+
+.mainbox2 {
+  width: 50%;
+  margin: 20px auto;
+  table-layout: fixed;
+}
+
+.mainbox2 td {
+  font-weight: bold;
+  text-align: center;
+  overflow: hidden;
+  
+  
+}
+#long{
+  width: 20%;
+}
+#width{
+    width: 40%;
+}
+@media(max-width: 600px) {
+
+  body {
+    margin:0;
+    padding: 0;
+   
+    
+  }
+  .container{
+    background-color:white;
+    
+    
+    padding: 0 10px;
+    box-sizing: border-box;
+  }
+
+  h1 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  .form1, .form2 {
+    flex-direction: column;
+    align-items: center;
+    padding: 5px;
+  
+    
+    
+    
+  }
+
+  .mainbox
+   {
+    width: 90%;
+    height: auto;
+    font-size: 20px;
+    background-color: gainsboro;
+  }
+
+  input {
+    width: 95%;
+    font-size: 16px;
+    padding: 5px;
+  }
+  select{
+    width: 95%;
+    padding: 5px;
+  }
+
+  .button {
+    font-size: 16px;
+    height: 40px;
+  }
+
+  .gender {
+    display: flex;
+    margin-top: 2px;
+    
+  }
+
+  
+
+  .mainbox2 {
+    width: 100%;
+    table-layout: auto;
+    border-collapse: collapse;
+
+    font-size: 14px;
+    
+
+    
+  }
+  .mainbox2 td{
+    padding: 5px;
+    word-wrap: break-word;
+  }
+  
+#long{
+    width: 20%;
+    
+}
+#width{
+    width: 160px;
+}
+}
